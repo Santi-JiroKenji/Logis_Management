@@ -1,0 +1,55 @@
+@import 'theme';
+
+// .col {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+// .row {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+.card{
+    background: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.card-header {
+    background: $primary-color;
+}
+.card-header span {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+}
+.provider {
+    padding-top: 3%;
+}
+.provider-name-label, .tel-number-label, .web-url-label {
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+.provider-profile img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #E5E5E5;
+}
+.detail input {
+    border: 1px solid $info-color;
+    height: 48px;
+}
+.detail label {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}

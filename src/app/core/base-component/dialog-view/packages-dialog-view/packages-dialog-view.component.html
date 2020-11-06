@@ -1,0 +1,93 @@
+<div class="card">
+  <div class="card-header"><span>{{package?.packageName}}</span></div>
+  <div class="card-body">
+    <div class="row promotion">
+      <div class="col-12">
+        <a *ngIf="!package?.viewMode">฿</a><label
+          [ngClass]="{'justify-text': package?.viewMode === true}">{{package?.promotion}}</label>
+        <span *ngIf="!package?.viewMode">บาท/วัน/คัน
+          <p>หรือ 360 บาท/คัน/เดือน จากปกติ 600 บาท</p>
+        </span>
+      </div>
+    </div>
+    <div class="row system">
+      <div class="col-6">
+        <label>ระบบ</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.system}}</span>
+      </div>
+    </div>
+    <div class="row function">
+      <div class="col-6">
+        <label>ฟังก์ชัน</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.functionForConsumer}}</span>
+      </div>
+    </div>
+    <div class="row car-value">
+      <div class="col-6">
+        <label>จำนวนรถ</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.carValue}}</span>
+      </div>
+    </div>
+    <div class="row user-value">
+      <div class="col-6">
+        <label>ผู้ใช้งาน</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.userValue}}</span>
+      </div>
+    </div>
+    <div class="row shipment-value">
+      <div class="col-6">
+        <label>จำนวนการจัดส่ง</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.shipmentValue}}</span>
+      </div>
+    </div>
+    <div class="row cargo-list">
+      <div class="col-6">
+        <label>รายการสินค้า</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.cargoList}}</span>
+      </div>
+    </div>
+    <div class="row mobile">
+      <div class="col-6">
+        <label>Mobile</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.mobileSupport}}</span>
+      </div>
+    </div>
+    <div class="row server-type">
+      <div class="col-6">
+        <label>Server</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.serverType}}</span>
+      </div>
+    </div>
+    <div class="row backup">
+      <div class="col-6">
+        <label>Backup</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.backup}}</span>
+      </div>
+    </div>
+    <div class="row support">
+      <div class="col-6">
+        <label>Support</label>
+      </div>
+      <div class="col-6">
+        :<span> {{package?.support}}</span>
+      </div>
+    </div>
+  </div>

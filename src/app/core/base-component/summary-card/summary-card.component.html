@@ -1,0 +1,9 @@
+<div class="card" [ngClass]="{'success-color': color === 'success', 'danger-color': color === 'danger'}">
+  <div class="card-body">
+    <span class="card-title">
+      {{ topic ? topic : '-' }}</span>
+    <span class="card-subtitle" [ngClass]="{'success-color': color === 'success', 'danger-color': color === 'danger'}">
+      {{ detail ? detail : '-' }}</span>
+  </div>
+</div>
+&nbsp;&nbsp;

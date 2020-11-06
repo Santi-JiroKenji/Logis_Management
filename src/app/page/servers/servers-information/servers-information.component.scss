@@ -1,0 +1,113 @@
+@import 'theme';
+
+// .col {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+// .row {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+
+.card {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+}
+.card-body {
+    width: 80%;
+    background: #fff;
+    margin-left: 9.5%;
+}
+.header-subject {
+    font-family: 'prompt';
+    color: $info-color;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+table {
+    border: 1px solid #C4C4C4;
+}
+tbody > tr > td > button {
+    color: #fff;
+    background: gray;
+    // border-width: 1px;
+    // border-style: solid;
+    // border-color: gray;
+    font-size: 13px;
+    padding: 5px 15px;
+    margin-top: -6px;
+}
+tbody > tr > td > button.success-color {
+    background: $success-color;
+}
+tbody > tr > td > button.danger-color {
+    background: $danger-color;
+}
+thead {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #727272;
+}
+tbody {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+}
+.first-data-on-table {
+    color: $info-color;
+}
+
+.memory, .disk {
+    padding-top: 3%;
+}
+.head-label label {
+    font-size: 24px;
+}
+.head-label span {
+    font-size: 16px;
+    float: right;
+}
+.sub-label, .bottom-sub-label {
+    color: #5F6368;
+    font-size: 12px;
+}
+.sub-label-sub-img {
+    color: #5F6368;
+    font-size: 12px;
+    padding-top: 2%;
+}
+.sub-label-sub-img span{
+    float: right;
+}
+.sub-label span, .bottom-sub-label span{
+    float: right;
+}
+.window-img img {
+    width: 100%;
+}
+
+.detail-column {
+    padding-top: 7%;
+}
+.detail-column .sub-head-label{
+    color: #5F6368;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.detail-column .data-label{
+    font-size: 22px;
+    padding-bottom: 30px;
+}
+.sub-detail-column .sub-head-detail-col {
+    color: #5F6368;
+    font-size: 14px;
+    padding-bottom: 4px;
+}

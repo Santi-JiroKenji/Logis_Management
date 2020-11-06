@@ -1,0 +1,41 @@
+<div class="main-container d-flex align-items-center min-vh-100 py-3 py-md-0">
+  <div class="container">
+    <div class="card login-card">
+      <div class="row no-gutters">
+        <div class="col-md-6">
+          <img src="/assets/images/left-bg.PNG" alt="login" class="login-card-img">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <div class="text-center">
+              <img src="/assets/images/logo-long.png" alt="logo">
+            </div>
+            <h2 class="text-center">
+              MoveMax Consumer Management
+            </h2>
+            <p class="login-card-description">Login</p>
+            <div>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username">
+              </div>
+              <div class="form-group mb-4">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control"
+                  placeholder="Enter your password">
+              </div>
+              <button class="login-form-btn login-btn mb-2" (click)="onClickLogin()">
+                LOGIN
+              </button>
+              <!-- <span class="divider black my-2"></span>
+              <button class="login-form-btn tracking-btn mb-4" type="button" routerLink="/tracking">
+                ตรวจสอบสถานะการจัดส่ง
+              </button> -->
+              <!-- <p class="text-center">Created by Handywings Co.,Ltd Version 1.8</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

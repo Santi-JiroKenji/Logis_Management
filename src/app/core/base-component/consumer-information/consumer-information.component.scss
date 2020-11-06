@@ -1,0 +1,35 @@
+@import 'theme';
+
+// .col {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+// .row {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+
+.profile-consumer {
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+.profile-consumer img {
+    height: 158px;
+    width: 158px;
+    border: 2px solid #E5E5E5;
+}
+.consumer-name label {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+}
+.tel-number label, .email label, 
+.address label, .detail label, .car-value label, .user-value label{
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}

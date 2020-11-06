@@ -1,0 +1,91 @@
+<div class="card">
+  <div class="card-header"><span>เลือก Server</span></div>
+  <div class="card-body">
+
+    <div class="row">
+      <div class="col col-12 fillter-label">
+        <label>ค้นหาจาก</label>
+        <span> : ชื่อ Server</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-12">
+        <div class="input-group mb-3 fillter-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text prepend" id="fillter"><svg width="25" height="25" viewBox="0 0 25 25"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24.649 22.8924L20.0142 18.2916C21.8133 16.0468 22.6845 13.1974 22.4488 10.3295C22.2131 7.46148 20.8883 4.79289 18.7469 2.87241C16.6055 0.951915 13.8102 -0.0744991 10.9358 0.0042144C8.06138 0.0829279 5.32636 1.26079 3.2931 3.2956C1.25983 5.33041 0.082865 8.06751 0.0042112 10.9441C-0.0744426 13.8207 0.951193 16.6181 2.87022 18.7611C4.78926 20.9042 7.45582 22.2299 10.3216 22.4658C13.1874 22.7018 16.0346 21.8299 18.2778 20.0294L22.875 24.6302C22.9912 24.7474 23.1293 24.8404 23.2816 24.9039C23.4338 24.9673 23.5971 25 23.762 25C23.9269 25 24.0902 24.9673 24.2424 24.9039C24.3947 24.8404 24.5328 24.7474 24.649 24.6302C24.8741 24.3971 25 24.0855 25 23.7613C25 23.4371 24.8741 23.1255 24.649 22.8924ZM11.2694 20.0294C9.53987 20.0294 7.84915 19.5162 6.41107 18.5545C4.973 17.5929 3.85216 16.2261 3.19028 14.627C2.52841 13.0279 2.35523 11.2683 2.69265 9.57067C3.03007 7.87305 3.86294 6.31369 5.08592 5.08978C6.3089 3.86587 7.86707 3.03238 9.5634 2.6947C11.2597 2.35702 13.018 2.53033 14.6159 3.19271C16.2138 3.85508 17.5796 4.97678 18.5405 6.41595C19.5014 7.85511 20.0142 9.54712 20.0142 11.278C20.0142 13.599 19.0929 15.825 17.4529 17.4662C15.813 19.1074 13.5887 20.0294 11.2694 20.0294Z"
+                  fill="white" />
+              </svg>
+            </span>
+          </div>
+          <input type="text" class="form-control fillter-input" placeholder="ระบุคำที่ต้องการค้นหา"
+            aria-label="Username" aria-describedby="fillter">
+          &nbsp;&nbsp;&nbsp;
+          <span><button class="btn fillter-search-button" type="submit">ค้นหา</button></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row form-row">
+      <div class="form-group col-12 server-info">
+        <table mat-table [dataSource]="dataSource">
+
+          <ng-container matColumnDef="serverName">
+            <th mat-header-cell *matHeaderCellDef> ชื่อ Server </th>
+            <td mat-cell *matCellDef="let element" class="first-data"><span class="first-data-on-table">
+                {{element.serverName}}</span>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> สถานะการใช้งาน </th>
+            <td mat-cell *matCellDef="let element"> <span><button type="button" class="btn"
+                  [ngClass]="{'success-color': element.status === 'เปิดการใช้งาน', 'danger-color': element.status === 'ปิดการใช้งาน'}"
+                  disabled>
+                  <p>{{element.status}}</p>
+                </button></span> </td>
+          </ng-container>
+
+          <ng-container matColumnDef="provider">
+            <th mat-header-cell *matHeaderCellDef> ผู้ให้บริการ </th>
+            <td mat-cell *matCellDef="let element"> {{element.provider}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="cpu">
+            <th mat-header-cell *matHeaderCellDef> CPU </th>
+            <td mat-cell *matCellDef="let element"> {{element.cpu}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="ram">
+            <th mat-header-cell *matHeaderCellDef> RAM </th>
+            <td mat-cell *matCellDef="let element"> {{element.ram}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="ssd">
+            <th mat-header-cell *matHeaderCellDef> SSD </th>
+            <td mat-cell *matCellDef="let element"> {{element.ssd}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="action" class="action">
+            <th mat-header-cell *matHeaderCellDef>
+            </th>
+
+            <td mat-cell *matCellDef="let row; let i=index;">
+              <button type="submit" class="btn button-submit">
+                <span>เลือก</span>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [length]="dataSource.filteredData.length" [pageIndex]="0" [pageSize]="5"
+          [pageSizeOptions]="[5, 10]"></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>

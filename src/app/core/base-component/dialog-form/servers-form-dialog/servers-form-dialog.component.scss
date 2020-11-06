@@ -1,0 +1,101 @@
+@import 'theme';
+
+// .col {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+// .row {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+.card{
+    background: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    padding-top: 7%;
+    padding-bottom: 2%;
+}
+.card-header {
+    background: $primary-color;
+}
+.card-header span {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+}
+.server-name, .cpu, .ram, 
+.storage, .detail, .provider {
+    padding-bottom: 3%;
+}
+.submit-button {
+    padding-right: 1%;
+}
+.reset-button {
+    padding-left: 1%;
+}
+.server-name input, .cpu input, .ram input, 
+.storage input, .detail input, .provider input{
+    border: 1px solid $info-color;
+    height: 48px;
+}
+.server-name label, .cpu label, .ram label, 
+.storage label, .detail label, .provider label{
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+}
+.submit-button button{
+    font-family: 'prompt';
+    background: $primary-color;
+    color: #fff;
+    padding: 10px 35px;
+    font-size: 13px;
+}
+.reset-button button{
+    font-family: 'prompt';
+    background: #fff;
+    color: $danger-color;
+    border: 1px solid #c4c4c4;
+    padding: 10px 35px;
+    font-size: 13px;
+}
+.submit-button, .reset-button {
+    padding-top: 20px;
+}
+
+.card-provider {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #D8D8D8;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.card-body-provider {
+    width: 90%;
+    margin-left: 15px;
+    height: 100%;
+    margin-top: 15px;
+}
+.card-body-provider img{
+    height: 75px;
+    width: 75px;   
+}
+.card-body-provider .provider-name, .card-body-provider .tel-number {
+    padding-bottom: 9px;
+}
+.card-body-provider .provider-name {
+    font-family: 'prompt';
+    font-size: 15px;
+}
+.card-body-provider .tel-number, .card-body-provider .website {
+    font-family: 'prompt';
+    font-size: 13px;
+}

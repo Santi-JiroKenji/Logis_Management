@@ -1,0 +1,111 @@
+@import 'theme';
+
+// .col {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+// .row {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+.card {
+    width: auto;
+}
+.card-body {
+    width: auto;
+    background: #fff;
+}
+.card-header {
+    background: $primary-color;
+}
+.card-header span {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+}
+.fillter-label label {
+    font-family: 'prompt';
+    font-size: 14px;
+    font-weight: bold;
+}
+.fillter-label span {
+    font-family: 'prompt';
+    font-size: 14px;
+    font-weight: normal;
+}
+.fillter-group > .input-group-prepend > span.prepend{
+    background: #404040;
+    height: 40px;
+    width: 60px;
+}
+.fillter-group > .input-group-prepend > span.prepend > svg{
+    margin-left: 5px; ;
+}
+.fillter-group input.fillter-input {
+    font-family: 'prompt';
+    font-size: 13px;
+    height: 40px;
+    width: 60px;
+}
+.fillter-group span > button {
+    background: #404040;
+    width: 70px;
+    height: 40px;
+    color: #fff;
+    font-family: 'prompt';
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.server-info th {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #727272;
+    width: 17.5%;
+}
+.server-info td {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    width: 17.5%;
+}
+.server-info td > span > button {
+    font-size: 13px;
+    padding: 5px 15px;
+}
+.first-data-on-table {
+    color: $info-color;
+}
+table {
+    width: 100%;
+}
+mat-paginator {
+    padding-top: 1%;
+    font-family: 'prompt';
+    font-size: 13px;
+    color: #757575;
+}
+.server-info td.first-data {
+    padding-top: 0px;
+}
+td.mat-cell{
+    border-bottom-style: none;
+}
+th.mat-header-cell{
+    border-bottom-style: none;
+}
+.server-info td > button {
+    background: $success-color;
+    width: 77px;
+    height: 40px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal;
+}

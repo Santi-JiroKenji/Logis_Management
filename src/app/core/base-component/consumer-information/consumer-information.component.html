@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col col-4">
+    <div class="profile-consumer">
+      <img src={{data?.logo}} class="rounded-circle" />
+    </div>
+  </div>
+  <div class="col col-8">
+    <div class="row consumer-name">
+      <div class="col col-12">
+        <label>{{ data?.consumerName ? data?.consumerName : '-'}}</label>
+      </div>
+    </div>
+    <div class="row tel-number">
+      <div class="col col-4">
+        <label>เบอร์โทรติดต่อ</label>
+      </div>
+      <div class="col col-8">
+        <label>{{ data?.contract ? data?.contract : '-'}}</label>
+      </div>
+    </div>
+    <div class="row email">
+      <div class="col col-4">
+        <label>อีเมล</label>
+      </div>
+      <div class="col col-8">
+        <label>{{ data?.email ? data?.email : '-'}}</label>
+      </div>
+    </div>
+    <div class="row car-value">
+      <div class="col col-4">
+        <label>จำนวนรถ</label>
+      </div>
+      <div class="col col-8">
+        <label>{{ data?.carValue ? data?.carValue : '-'}}</label>
+      </div>
+    </div>
+    <div class="row user-value">
+      <div class="col col-4">
+        <label>ผู้ใช้งาน</label>
+      </div>
+      <div class="col col-8">
+        <label>{{ data?.userValue ? data?.userValue : '-'}}</label>
+      </div>
+    </div>
+    <div class="row address">
+      <div class="col col-4">
+        <label>ที่อยู่</label>
+      </div>
+      <div class="col col-8">
+        <label>{{ data?.address ? data?.address : '-'}}</label>
+      </div>
+    </div>
+    <div class="row detail">
+      <div class="col col-4">
+        <label>รายละเอียด</label>
+      </div>
+      <div class="col col-8">
+        <label>{{ data?.detail ? data?.detail : '-'}}</label>
+      </div>
+    </div>
+  </div>
+</div>

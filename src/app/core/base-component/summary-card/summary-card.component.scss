@@ -1,0 +1,46 @@
+@import "theme";
+
+.card{
+    font-family: 'roboto';
+    border: 1px solid #D9D8D8;
+    border-top-color: #bebebe;
+    border-style: solid;
+    border-top-width: 3px;
+    width: 278px;
+    height: 45.12px;
+    display: inline-block;
+}
+
+.card.success-color{
+    border-top-color: $success-color;
+}
+
+.card.danger-color{
+    border-top-color: $danger-color;
+}
+
+
+.card-title {
+    font-family: 'prompt';
+    display: flex;
+    color: #7F7A7A;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: -10px;
+}
+
+.card-subtitle {
+    font-size: 20px;
+    font-weight: normal;
+    display: flex;
+    margin-top: -33px;
+    float: right;
+}
+
+.card-subtitle.success-color {
+    color: $success-color;
+}
+
+.card-subtitle.danger-color {
+    color: $danger-color;
+}

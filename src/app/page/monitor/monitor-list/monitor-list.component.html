@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-4 mb-2">
+
+    <div class="input-group">
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.753906 4.9358V4.93563V3.76562C0.753906 3.10515 1.02037 2.4701 1.49729 2.00063C1.97448 1.5309 2.62334 1.26562 3.30153 1.26562H17.5237C18.2019 1.26562 18.8508 1.5309 19.328 2.00063C19.8049 2.4701 20.0714 3.10515 20.0714 3.76562V4.9277C20.0599 5.27052 19.9767 5.60761 19.8266 5.91792L19.7768 6.02106V6.0834C19.6627 6.31078 19.5111 6.51866 19.3276 6.6984L19.3266 6.6993L13.1095 12.8193L12.9603 12.9662V13.1756V17.7646C12.9599 17.8551 12.9341 17.9443 12.8851 18.0224C12.836 18.1006 12.7652 18.165 12.6797 18.2075C12.6796 18.2076 12.6795 18.2076 12.6793 18.2077L8.61724 20.207L8.61722 20.207L8.61287 20.2092C8.54079 20.2455 8.46064 20.265 8.37889 20.2656C8.28113 20.2659 8.18578 20.2392 8.10366 20.1893C8.02947 20.1434 7.96921 20.0804 7.9278 20.0066C7.88627 19.9327 7.86485 19.8501 7.86502 19.7666V19.7656V13.1756V12.9653L7.71461 12.8182L1.45709 6.6984C1.45705 6.69837 1.45702 6.69834 1.45699 6.69831C1.2735 6.51859 1.1219 6.31074 1.00787 6.0834V6.02985L0.965041 5.93314C0.825581 5.61827 0.753785 5.27876 0.753906 4.9358ZM7.36502 13.1756V19.7656V13.1756Z"
+              stroke="#706B6B" />
+          </svg>
+        </button>
+      </div>
+
+
+      <div class="input-group-prepend">
+        <button class="btn" type="button">
+          <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+              d="M17.6934 21.7995C17.4061 21.7991 17.1329 21.6722 16.9434 21.4512L13.0834 16.9746C10.7017 18.5116 7.73304 18.7459 5.14955 17.6009C2.56606 16.4559 0.700378 14.0789 0.163376 11.2483C-0.542027 7.59514 1.07918 3.88361 4.20823 1.9881C7.33728 0.0925847 11.2933 0.425565 14.0783 2.81887C16.8634 5.21218 17.8714 9.14502 16.5934 12.6312C16.3973 13.1602 15.8198 13.4262 15.3034 13.2253C14.787 13.0245 14.5273 12.4328 14.7234 11.9039C15.4726 9.86215 15.2094 7.57511 14.0173 5.76779C12.8253 3.96048 10.8521 2.85703 8.72338 2.80728C6.73819 2.74478 4.83528 3.62122 3.56338 5.18386C1.49424 7.718 1.5266 11.4159 3.63974 13.9117C5.75287 16.4074 9.32191 16.963 12.0634 15.2229C12.8973 14.7206 13.9626 14.9018 14.5934 15.6531L18.4534 20.1297C18.7124 20.4318 18.775 20.8612 18.6134 21.2276C18.4518 21.594 18.0959 21.8297 17.7034 21.8302L17.6934 21.7995Z"
+              fill="#0F1E36" />
+          </svg>
+        </button>
+        <input type="text" class="form-control" placeholder="ค้นหาบริษัท">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4 mb-2">
+    <div class="justify-items">
+      <app-summary-card *ngFor="let item of list" [topic]="item.topic" [detail]="item.detail" [color]="item.color">
+      </app-summary-card>
+    </div>
+  </div>
+
+  <div class="col-4 mb-2">
+    <div class="button-group">
+      <span class="card-tog">
+        <button type="button" class="btn" (click)="onDisplayModeChange(1)" [ngClass]="{'btn-primary active': displayMode === 1}">
+          <img src="./assets/images/card_toggle.png" />
+        </button>
+      </span>
+      &nbsp;
+      <span class="list-tog">
+        <button type="button" class="btn" (click)="onDisplayModeChange(2)" [ngClass]="{'btn-primary active': displayMode === 2}">
+          <img src="./assets/images/list_toggle.png" />
+        </button>
+      </span>
+      <!-- &nbsp;
+      <span class="add-data">
+        <button type="button" class="btn">
+          + เพิ่มข้อมูล
+        </button>
+      </span> -->
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row" style="margin-top: -25px;" *ngIf="displayMode === 1">
+  <app-consumer-card-detail *ngFor="let customer of customerList" [data]="customer" [viewMode]="true"
+    (clickView)="onConsumerCardViewClick($event.id)" class="col-4 py-3 px-3">
+  </app-consumer-card-detail>
+</div>
+
+<div class="row" style="margin-top: -25px;" *ngIf="displayMode === 2">
+  <app-consumer-table-detail [viewMode]="true" (clickView)="onConsumerCardViewClick($event.id)" class="col-4 py-3 px-3">
+  </app-consumer-table-detail>
+</div>

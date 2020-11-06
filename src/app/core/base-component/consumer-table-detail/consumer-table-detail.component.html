@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row justify-content-center header-subject">
+                    ลูกค้า
+                </div>
+                <div class="row form-row">
+                    <div class="form-group col-12 consumer-info">
+                        <table mat-table [dataSource]="dataSource">
+
+                            <ng-container matColumnDef="consumerName">
+                                <th mat-header-cell *matHeaderCellDef>ชื่อบริษัท</th>
+                                <td mat-cell *matCellDef="let data" class="first-data">
+                                    <img src={{data?.logo}} class="rounded-circle" [ngClass]="{'success-color': data?.status === 'เปิดการใช้งาน', 'danger-color': data?.status === 'ปิดการใช้งาน'}" />
+                                    <span class="first-data-on-table">{{data?.consumerName}}</span>
+                                    <p>Contract: {{data?.contract}}</p>
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="status">
+                                <th mat-header-cell *matHeaderCellDef> สถานะการใช้งาน </th>
+                                <td mat-cell *matCellDef="let data">
+                                  <span><button type="button" class="btn"
+                                      [ngClass]="{'success-color': data?.status === 'เปิดการใช้งาน', 'danger-color': data?.status === 'ปิดการใช้งาน'}"
+                                      disabled>
+                                      <p>{{data?.status}}</p>
+                                    </button></span>
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="packageName">
+                                <th mat-header-cell *matHeaderCellDef>แพ็คเกจ</th>
+                                <td mat-cell *matCellDef="let data">
+                                    <span>{{data?.package?.packageName}}</span>
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="runtime">
+                                <th mat-header-cell *matHeaderCellDef>เวลาที่เปิดใช้งาน</th>
+                                <td mat-cell *matCellDef="let data">
+                                    <span>{{data?.runtime}} days</span>
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="serverName">
+                                <th mat-header-cell *matHeaderCellDef>ที่ตั้ง Server</th>
+                                <td mat-cell *matCellDef="let data">
+                                    <span>{{data?.server?.serverName}}</span>
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="expDate">
+                                <th mat-header-cell *matHeaderCellDef>วันหมดอายุ</th>
+                                <td mat-cell *matCellDef="let data">
+                                    <span>{{data?.expDate}}</span>
+                                </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="action" class="action">
+                                <th mat-header-cell *matHeaderCellDef>
+                                </th>
+                
+                                <td mat-cell *matCellDef="let row; let i=index;">
+                                  <button type="button" class="btn" (click)="onClickView()">
+                                    <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M24.9044 9.84509C22.3794 3.98259 17.6294 0.345093 12.5044 0.345093C7.37936 0.345093 2.62936 3.98259 0.104356 9.84509C0.0355268 10.0028 0 10.173 0 10.3451C0 10.5172 0.0355268 10.6874 0.104356 10.8451C2.62936 16.7076 7.37936 20.3451 12.5044 20.3451C17.6294 20.3451 22.3794 16.7076 24.9044 10.8451C24.9732 10.6874 25.0087 10.5172 25.0087 10.3451C25.0087 10.173 24.9732 10.0028 24.9044 9.84509ZM12.5044 17.8451C8.54186 17.8451 4.79186 14.9826 2.62936 10.3451C4.79186 5.70759 8.54186 2.84509 12.5044 2.84509C16.4669 2.84509 20.2169 5.70759 22.3794 10.3451C20.2169 14.9826 16.4669 17.8451 12.5044 17.8451ZM12.5044 5.34509C11.5154 5.34509 10.5488 5.63834 9.72651 6.18774C8.90426 6.73715 8.2634 7.51804 7.88496 8.43167C7.50652 9.34531 7.4075 10.3506 7.60043 11.3205C7.79336 12.2904 8.26956 13.1814 8.96882 13.8806C9.66809 14.5799 10.559 15.0561 11.5289 15.249C12.4988 15.4419 13.5041 15.3429 14.4178 14.9645C15.3314 14.5861 16.1123 13.9452 16.6617 13.1229C17.2111 12.3007 17.5044 11.334 17.5044 10.3451C17.5044 9.01901 16.9776 7.74724 16.0399 6.80956C15.1022 5.87188 13.8304 5.34509 12.5044 5.34509ZM12.5044 12.8451C12.0099 12.8451 11.5266 12.6985 11.1154 12.4238C10.7043 12.1491 10.3839 11.7586 10.1947 11.3018C10.0054 10.845 9.95593 10.3423 10.0524 9.85737C10.1489 9.37241 10.387 8.92696 10.7366 8.57733C11.0862 8.22769 11.5317 7.98959 12.0166 7.89313C12.5016 7.79667 13.0042 7.84617 13.4611 8.03539C13.9179 8.22461 14.3083 8.54504 14.583 8.95617C14.8577 9.36729 15.0044 9.85064 15.0044 10.3451C15.0044 11.0081 14.741 11.644 14.2721 12.1129C13.8033 12.5817 13.1674 12.8451 12.5044 12.8451Z"
+                                        fill="#C7C7C7" />
+                                    </svg>
+                                  </button>
+                
+                                  <button type="button" class="btn" (click)="onClickEdit()" *ngIf="!viewMode">
+                                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M3.875 18.8516H8.645C8.79306 18.8525 8.93983 18.8241 9.07689 18.7681C9.21396 18.7121 9.33863 18.6296 9.44375 18.5254L17.2288 10.7291L20.4237 7.60162C20.5292 7.49703 20.6129 7.37261 20.67 7.23552C20.7271 7.09842 20.7565 6.95138 20.7565 6.80287C20.7565 6.65435 20.7271 6.50731 20.67 6.37022C20.6129 6.23313 20.5292 6.1087 20.4237 6.00412L15.6537 1.17787C15.5492 1.07242 15.4247 0.988728 15.2876 0.931613C15.1506 0.874498 15.0035 0.845093 14.855 0.845093C14.7065 0.845093 14.5594 0.874498 14.4224 0.931613C14.2853 0.988728 14.1608 1.07242 14.0563 1.17787L10.8837 4.36162L3.07625 12.1579C2.97198 12.263 2.88949 12.3877 2.83351 12.5247C2.77752 12.6618 2.74914 12.8086 2.75 12.9566V17.7266C2.75 18.025 2.86853 18.3111 3.0795 18.5221C3.29048 18.7331 3.57663 18.8516 3.875 18.8516ZM14.855 3.56287L18.0387 6.74662L16.4413 8.34412L13.2575 5.16037L14.855 3.56287ZM5 13.4179L11.6713 6.74662L14.855 9.93037L8.18375 16.6016H5V13.4179ZM21.875 21.1016H1.625C1.32663 21.1016 1.04048 21.2201 0.829505 21.4311C0.618526 21.6421 0.5 21.9282 0.5 22.2266C0.5 22.525 0.618526 22.8111 0.829505 23.0221C1.04048 23.2331 1.32663 23.3516 1.625 23.3516H21.875C22.1734 23.3516 22.4595 23.2331 22.6705 23.0221C22.8815 22.8111 23 22.525 23 22.2266C23 21.9282 22.8815 21.6421 22.6705 21.4311C22.4595 21.2201 22.1734 21.1016 21.875 21.1016Z"
+                                        fill="#C7C7C7" />
+                                    </svg>
+                                  </button>
+                                </td>
+                              </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+
+                        <mat-paginator [length]="dataSource.filteredData.length" [pageIndex]="0" [pageSize]="5"
+                            [pageSizeOptions]="[5, 10]"></mat-paginator>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

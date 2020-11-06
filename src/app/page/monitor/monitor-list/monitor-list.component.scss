@@ -1,0 +1,80 @@
+@import "theme";
+
+// .col-4 {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+.dropdown {
+    padding-right: 10px;
+}
+.input-group-prepend input {
+    font-family: 'prompt';
+    font-size: 13px;
+    height: 45.12px;
+    width: 465px;
+    background: #F7F2F2;
+    border: 1px solid #D9D8D8;
+    border-left: none;
+    box-sizing: border-box;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    color: #706B6B;
+}
+.input-group-prepend > button {
+    background: #F7F2F2;
+    border: 1px solid #D9D8D8;
+    border-right: none;
+    box-sizing: border-box;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: #706B6B;
+    width: 30px;
+    height: 45.12px;
+}
+.dropdown > button {
+    background: #F7F2F2;
+    border: 1px solid #D9D8D8;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #706B6B;
+    width: 64px;
+    height: 45.12px;
+}
+// .justify-items {
+//     margin-left: 1px;
+// }
+.button-group {
+    float: right;
+}
+.card-tog button{
+    width: 45.12px;
+    height: 45.12px;
+}
+.card-tog button > img {
+    width: 45.12px;
+    height: 45.12px;
+    margin-top: -7px;
+    margin-left: -13px;
+}
+.list-tog button{
+    width: 45.12px;
+    height: 45.12px;
+}
+.list-tog button > img {
+    width: 45.12px;
+    height: 45.12px;
+    margin-top: -7px;
+    margin-left: -13px;
+}
+.add-data button{
+    font-family: 'prompt';
+    font-size: 13px;
+    color: #fff;
+    background-color: $success-color;
+    width: 92px;
+    height: 45.12px;
+}

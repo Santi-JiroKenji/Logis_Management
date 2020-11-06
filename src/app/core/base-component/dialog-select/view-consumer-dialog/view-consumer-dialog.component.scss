@@ -1,0 +1,68 @@
+@import 'theme';
+
+// .col {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+// .row {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+.card {
+    width: 100%;
+}
+.card-body {
+    width: 85%;
+    background: #fff;
+    margin-left: 7.5%;
+    margin-top: 1%;
+}
+.card-header {
+    background: $primary-color;
+}
+.card-header span {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+}
+.server-info label, .package-info label{
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.server-info, .package-info {
+    padding-bottom: 1%;
+}
+.server-info table {
+    border: 1px solid #C4C4C4;
+}
+.package-info table {
+    border: 1px solid #C4C4C4;
+}
+.server-info tbody > tr > td > button {
+    font-size: 13px;
+    padding: 5px 15px;
+    margin-top: -6px;
+}
+thead {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #727272;
+}
+tbody {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+}
+.first-data-on-table {
+    color: $info-color;
+}

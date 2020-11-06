@@ -1,0 +1,96 @@
+@import 'theme';
+
+.card {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+}
+.card {
+    width: 1784px;
+}
+.card-body {
+    width: 91%;
+    background: #fff;
+    margin-left: 73px;
+}
+.header-subject {
+    font-family: 'prompt';
+    color: $info-color;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.consumer-info th {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #727272;
+    width: 15.3%;
+}
+.consumer-info td {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    width: 15.3%;
+}
+
+.consumer-info td > span > button {
+    background: gray;
+    width: 108px;
+    height: 33px;
+}
+.consumer-info td > span > button.success-color {
+    background: $success-color;
+}
+.consumer-info td > span > button.danger-color {
+    background: $danger-color;
+}
+.consumer-info td > span > button > p {
+    color: #fff;
+    font-size: 13px;
+    margin-top: -1px;
+}
+
+.first-data-on-table {
+    color: $info-color;
+    margin-left: 5px;
+}
+.first-data p{
+    color: #000;
+    margin-left: 50px;
+    margin-top: -22px;
+}
+table {
+    width: 100%;
+}
+mat-paginator {
+    padding-top: 1%;
+    font-family: 'prompt';
+    font-size: 13px;
+    color: #757575;
+}
+.consumer-info td.first-data {
+    padding-bottom: 10px;
+}
+td.mat-cell{
+    border-bottom-style: none;
+}
+
+.consumer-info td > img {
+    width: 45px;
+    height: 45px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: gray;
+    margin-top: 25px;
+} 
+
+.consumer-info td > img.success-color {
+    border-color: $success-color;
+}
+
+.consumer-info td > img.danger-color {
+    border-color: $danger-color;
+}

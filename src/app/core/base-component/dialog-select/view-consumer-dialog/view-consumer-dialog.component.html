@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header"><span>รายละเอียดลูกค้า</span></div>
+  <div class="card-body">
+
+    <app-consumer-information [data]="consumer"></app-consumer-information>
+
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="form-row">
+          <div class="form-group col-12 server-info">
+            <label for="serverInfo">ข้อมูล Server</label>
+            <app-servers-data [data]="consumer.server"></app-servers-data>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-12 package-info">
+            <label for="packageInfo">ข้อมูล แพ็คเกจ</label>
+            <app-packages-data [data]="consumer.package"></app-packages-data>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

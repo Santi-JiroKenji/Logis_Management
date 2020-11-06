@@ -1,0 +1,462 @@
+<div class="row">
+  <div class="col col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row justify-content-center header-subject">
+          ข้อมูล Server
+        </div>
+        <div class="row">
+          <div class="col col-12">
+            <div class="form-row">
+              <div class="form-group col-12 server-info">
+                <table class="table table-borderless my-3" id="serverInfo">
+                  <thead>
+                    <tr>
+                      <th scope="col">Size</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">EndPoint</th>
+                      <th scope="col">Provider</th>
+                      <th scope="col">CPU</th>
+                      <th scope="col">RAM</th>
+                      <th scope="col">SSD</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="first-data-on-table">{{data?.serverName}}</td>
+                      <td><button type="button" class="btn"
+                          [ngClass]="{'success-color': data?.status === 'เปิดการใช้งาน', 'danger-color': data?.status === 'ปิดการใช้งาน'}"
+                          disabled>{{data?.status}}</button></td>
+                      <td>{{data?.endPoint}}</td>
+                      <td>{{data?.provider}}</td>
+                      <td>{{data?.cpu}}</td>
+                      <td>{{data?.ram}}</td>
+                      <td>{{data?.ssd}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row cpu">
+          <div class="col col-6">
+            <div class="row head-label">
+              <div class="col col-4">
+                <label>CPU</label>
+              </div>
+              <div class="col col-8">
+                <span>AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx</span>
+              </div>
+            </div>
+            <div class="row sub-label">
+              <div class="col col-6">
+                % Utilization
+              </div>
+              <div class="col col-6">
+                <span>100%</span>
+              </div>
+            </div>
+            <div class="row window-img">
+              <div class="col col-12">
+                <img src="./assets/images/cpu-utilization.PNG">
+              </div>
+            </div>
+            <div class="row bottom-sub-label">
+              <div class="col col-6">
+                60 second
+              </div>
+              <div class="col col-6">
+                <span>0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-6">
+            <div class="row detail-column">
+              <div class="col col-7">
+                <div class="row sub-head-label">
+                  <div class="col col-4">
+                    Utilization
+                  </div>
+                  <div class="col col-4">
+                    Speed
+                  </div>
+                  <div class="col col-4"></div>
+                </div>
+                <div class="row data-label">
+                  <div class="col col-4">
+                    {{data?.cpuPer}}
+                  </div>
+                  <div class="col col-4">
+                    1.71 GHz
+                  </div>
+                  <div class="col col-4"></div>
+                </div>
+                <div class="row sub-head-label">
+                  <div class="col col-4">
+                    Process
+                  </div>
+                  <div class="col col-4">
+                    Threads
+                  </div>
+                  <div class="col col-4">
+                    Handles
+                  </div>
+                </div>
+                <div class="row data-label">
+                  <div class="col col-4">
+                    259
+                  </div>
+                  <div class="col col-4">
+                    3548
+                  </div>
+                  <div class="col col-4">
+                    106187
+                  </div>
+                </div>
+                <div class="row sub-head-label">
+                  <div class="col col-4">
+                    Up Time
+                  </div>
+                  <div class="col col-4"></div>
+                  <div class="col col-4"></div>
+                </div>
+                <div class="row data-label">
+                  <div class="col col-4">
+                    0:00:59:26
+                  </div>
+                  <div class="col col-4"></div>
+                  <div class="col col-4"></div>
+                </div>
+              </div>
+
+              <div class="col col-5 sub-detail-column">
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Base speed:
+                  </div>
+                  <div class="col col-6 sub-data-detail-col">
+                    2.10 GHz
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Socket:
+                  </div>
+                  <div class="col col-6 sub-data-detail-col">
+                    8
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Cores:
+                  </div>
+                  <div class="col col-6 sub-data-detail-col">
+                    1
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Logical processors:
+                  </div>
+                  <div class="col col-6 sub-data-detail-col">
+                    4
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Virtualization:
+                  </div>
+                  <div class="col col-6 sub-data-detail-col">
+                    Disabled
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Hyper-V support:
+                  </div>
+                  <div class="col col-6 sub-data-detail-col">
+                    Yes
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    L1 cache:
+                  </div>
+                  <div class="col col-6 sub-data-detail-col">
+                    384 KB
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    L2 cache:
+                  </div>
+                  <div class="col col-6 sub-data-detail-col">
+                    2.0 MB
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    L3 cache:
+                  </div>
+                  <div class="col col-6 sub-data-detail-col">
+                    4.0 MB
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row memory">
+          <div class="col col-6">
+            <div class="row head-label">
+              <div class="col col-4">
+                <label>Memory</label>
+              </div>
+              <div class="col col-8">
+                <span>8.0 GB</span>
+              </div>
+            </div>
+            <div class="row sub-label">
+              <div class="col col-6">
+                Memory usage
+              </div>
+              <div class="col col-6">
+                <span>7.8 GB</span>
+              </div>
+            </div>
+            <div class="row window-img">
+              <div class="col col-12">
+                <img src="./assets/images/memory-usage.PNG">
+              </div>
+            </div>
+            <div class="row sub-label-sub-img">
+              <div class="col col-6">
+                Memory composition
+              </div>
+              <div class="col col-6"></div>
+            </div>
+            <div class="row window-img">
+              <div class="col col-12">
+                <img src="./assets/images/memory-compos.PNG">
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-6">
+            <div class="row detail-column">
+              <div class="col col-7">
+                <div class="row sub-head-label">
+                  <div class="col col-7">
+                    In use (Compressed)
+                  </div>
+                  <div class="col col-5">
+                    Available
+                  </div>
+                </div>
+                <div class="row data-label">
+                  <div class="col col-7">
+                    5.4 GB (677 MB)
+                  </div>
+                  <div class="col col-5">
+                    2.3 GB
+                  </div>
+                </div>
+                <div class="row sub-head-label">
+                  <div class="col col-7">
+                    Commited
+                  </div>
+                  <div class="col col-5">
+                    Cached
+                  </div>
+                </div>
+                <div class="row data-label">
+                  <div class="col col-7">
+                    9.9/18.8 GB
+                  </div>
+                  <div class="col col-5">
+                    2.3 GB
+                  </div>
+                </div>
+                <div class="row sub-head-label">
+                  <div class="col col-7">
+                    Paged pool
+                  </div>
+                  <div class="col col-5">
+                    Non-paged pool
+                  </div>
+                </div>
+                <div class="row data-label">
+                  <div class="col col-7">
+                    329 MB
+                  </div>
+                  <div class="col col-5">
+                    301 MB
+                  </div>
+                </div>
+              </div>
+
+              <div class="col col-5 sub-detail-column">
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Speed:
+                  </div>
+                  <div class="col col-6">
+                    2400 MHz
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Slots used:
+                  </div>
+                  <div class="col col-6">
+                    1 of 2
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Form factor:
+                  </div>
+                  <div class="col col-6">
+                    SODIMM
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Hardware reserved:
+                  </div>
+                  <div class="col col-6">
+                    191 MB
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row disk">
+          <div class="col col-6">
+            <div class="row head-label">
+              <div class="col col-4">
+                <label>Disk</label>
+              </div>
+              <div class="col col-8">
+                <span>INTEL SSDPEKNW160G8</span>
+              </div>
+            </div>
+            <div class="row sub-label">
+              <div class="col col-6">
+                Active time
+              </div>
+              <div class="col col-6">
+                <span>100%</span>
+              </div>
+            </div>
+            <div class="row window-img">
+              <div class="col col-12">
+                <img src="./assets/images/disk-active.PNG">
+              </div>
+            </div>
+            <div class="row bottom-sub-label">
+              <div class="col col-6">
+                60 seconds
+              </div>
+              <div class="col col-6">
+                <span>0</span>
+              </div>
+            </div>
+            <div class="row sub-label-sub-img">
+              <div class="col col-6">
+                Disk transfer rate
+              </div>
+              <div class="col col-6">
+                <span>1 MB/s</span>
+              </div>
+            </div>
+            <div class="row window-img">
+              <div class="col col-12">
+                <img src="./assets/images/disk-transfer.PNG">
+              </div>
+            </div>
+            <div class="row bottom-sub-label">
+              <div class="col col-6">
+                60 seconds
+              </div>
+              <div class="col col-6">
+                <span>0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-6">
+            <div class="row detail-column">
+              <div class="col col-7">
+                <div class="row sub-head-label">
+                  <div class="col col-5">
+                    Active time
+                  </div>
+                  <div class="col col-7">
+                    Average response time
+                  </div>
+                </div>
+                <div class="row data-label">
+                  <div class="col col-5">
+                    0%
+                  </div>
+                  <div class="col col-7">
+                    0.9 ms
+                  </div>
+                </div>
+                <div class="row sub-head-label">
+                  <div class="col col-5">
+                    Read speed
+                  </div>
+                  <div class="col col-7">
+                    Write speed
+                  </div>
+                </div>
+                <div class="row data-label">
+                  <div class="col col-5">
+                    20.4 KB/s
+                  </div>
+                  <div class="col col-7">
+                    0 KB/s
+                  </div>
+                </div>
+              </div>
+
+              <div class="col col-5 sub-detail-column">
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Capacity:
+                  </div>
+                  <div class="col col-6">
+                    154 GB
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    System disk:
+                  </div>
+                  <div class="col col-6">
+                    Yes
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col-6 sub-head-detail-col">
+                    Page file:
+                  </div>
+                  <div class="col col-6">
+                    Yes
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,124 @@
+@import 'theme';
+
+// .col {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+// .row {
+//     border-style: solid;
+//     border-width: 1px;
+//     border-color: #000;
+// }
+hr.hr-line {
+    border: 1px solid #BEBEBE;
+    width: 92%;
+    margin-top: 2px;
+}
+.detail-group {
+    margin-left: 35px;
+}
+.card {
+    height: 345px;
+    background-color: #fff;;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+}
+.profile-consumer > img{
+    height: 85px;
+    width: 85px;
+    border-color: #bebebe;
+    border-style: solid;
+    border-width: 2px;
+    padding: 2px;
+    filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.09));
+}
+.profile-consumer > img.success-color{
+    border-color: $success-color;
+}
+.profile-consumer > img.danger-color{
+    border-color: $danger-color;
+}
+.status-label button{
+    font-size: 13px;
+    color: #fff;
+    background: gray;
+    // border-width: 1px;
+    // border-style: solid;
+    // border-color: gray;
+    padding: 5px 15px;
+}
+.status-label button.success-color {
+    background: $success-color;
+}
+.status-label button.danger-color {
+    background: $danger-color;
+}
+
+.consumer-name-label {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: $info-color;
+}
+.contract-number-label ,.status-label ,.package-label ,
+.runtime-label ,.server-label ,.car-value-label ,
+.user-value-label ,.exp-date-label {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px;
+}
+.contract-number-label ,.status-label {
+    margin-left: -6px;
+}
+.contract-number-label {
+    padding-top: 5px;
+    padding-bottom: 1px;
+}
+.contract-number-label span ,.package-label span,
+.runtime-label span,.server-label span,.car-value-label span,
+.user-value-label span,.exp-date-label span{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    margin-left: 2px;
+    margin-top: 0px;
+}
+.exp-date-label span.time {
+    color: #000;
+}
+.exp-date-label span.time.danger-color {
+    color: $danger-color;
+}
+.exp-date-label span.time.success-color {
+    color: $success-color;
+}
+
+.view-button{
+    padding-right: 5px;
+}
+.view-button button {
+    width: 25px;
+    height: 25px;
+    background-color: none;
+}
+.view-button button > svg {
+    width: 23px;
+    height: 23px;
+    margin-left: -11px;
+    margin-top: -15px;
+}
+
+.edit-button button{
+    width: 25px;
+    height: 25px;
+    background-color: none;
+}
+.edit-button button > svg{
+    width: 23px;
+    height: 23px;
+    margin-left: -11px;
+    margin-top: -15px;
+}

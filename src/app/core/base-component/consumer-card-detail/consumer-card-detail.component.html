@@ -1,0 +1,119 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col col-3">
+        <div class="profile-consumer">
+          <img src={{data?.logo}} class="rounded-circle"
+            [ngClass]="{'success-color': data?.color === 'success', 'danger-color': data?.color === 'danger'}" />
+        </div>
+      </div>
+      <div class="col col-7">
+        <div class="consumer-label-group-first">
+          <div class="row">
+            <div class="consumer-name-label">
+              {{ data?.consumerName ? data?.consumerName : '-' }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="contract-number-label">
+              เบอร์โทร์ติดต่อ:
+              <span>
+                {{ data?.contract ? data?.contract : '-'}}
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="status-label">
+              <button type="button" class="btn"
+                [ngClass]="{'success-color': data?.color === 'success', 'danger-color': data?.color === 'danger'}"
+                disabled>{{ data?.status ? data?.status : '-'}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-2">
+        <span class="view-button">
+          <button type="button" class="btn" (click)="onClickView()">
+            <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24.9044 10C22.3794 4.1375 17.6294 0.5 12.5044 0.5C7.37936 0.5 2.62936 4.1375 0.104356 10C0.0355268 10.1577 0 10.3279 0 10.5C0 10.6721 0.0355268 10.8423 0.104356 11C2.62936 16.8625 7.37936 20.5 12.5044 20.5C17.6294 20.5 22.3794 16.8625 24.9044 11C24.9732 10.8423 25.0087 10.6721 25.0087 10.5C25.0087 10.3279 24.9732 10.1577 24.9044 10ZM12.5044 18C8.54186 18 4.79186 15.1375 2.62936 10.5C4.79186 5.8625 8.54186 3 12.5044 3C16.4669 3 20.2169 5.8625 22.3794 10.5C20.2169 15.1375 16.4669 18 12.5044 18ZM12.5044 5.5C11.5154 5.5 10.5488 5.79324 9.72651 6.34265C8.90426 6.89206 8.2634 7.67295 7.88496 8.58658C7.50652 9.50021 7.4075 10.5055 7.60043 11.4755C7.79336 12.4454 8.26956 13.3363 8.96882 14.0355C9.66809 14.7348 10.559 15.211 11.5289 15.4039C12.4988 15.5969 13.5041 15.4978 14.4178 15.1194C15.3314 14.741 16.1123 14.1001 16.6617 13.2778C17.2111 12.4556 17.5044 11.4889 17.5044 10.5C17.5044 9.17392 16.9776 7.90215 16.0399 6.96447C15.1022 6.02678 13.8304 5.5 12.5044 5.5ZM12.5044 13C12.0099 13 11.5266 12.8534 11.1154 12.5787C10.7043 12.304 10.3839 11.9135 10.1947 11.4567C10.0054 10.9999 9.95593 10.4972 10.0524 10.0123C10.1489 9.52732 10.387 9.08186 10.7366 8.73223C11.0862 8.3826 11.5317 8.1445 12.0166 8.04804C12.5016 7.95157 13.0042 8.00108 13.4611 8.1903C13.9179 8.37952 14.3083 8.69995 14.583 9.11107C14.8577 9.5222 15.0044 10.0055 15.0044 10.5C15.0044 11.163 14.741 11.7989 14.2721 12.2678C13.8033 12.7366 13.1674 13 12.5044 13Z"
+                fill="#C7C7C7" />
+            </svg>
+          </button>
+        </span>
+        <span class="edit-button" *ngIf="!viewMode">
+          <button type="button" class="btn" (click)="onClickEdit()">
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.875 18.0065H8.645C8.79306 18.0074 8.93983 17.979 9.07689 17.923C9.21396 17.867 9.33863 17.7845 9.44375 17.6803L17.2288 9.88402L20.4237 6.75652C20.5292 6.65194 20.6129 6.52751 20.67 6.39042C20.7271 6.25333 20.7565 6.10629 20.7565 5.95777C20.7565 5.80926 20.7271 5.66222 20.67 5.52512C20.6129 5.38803 20.5292 5.26361 20.4237 5.15902L15.6537 0.332773C15.5492 0.227329 15.4247 0.143635 15.2876 0.0865203C15.1506 0.0294055 15.0035 0 14.855 0C14.7065 0 14.5594 0.0294055 14.4224 0.0865203C14.2853 0.143635 14.1608 0.227329 14.0563 0.332773L10.8837 3.51652L3.07625 11.3128C2.97198 11.4179 2.88949 11.5426 2.83351 11.6796C2.77752 11.8167 2.74914 11.9635 2.75 12.1115V16.8815C2.75 17.1799 2.86853 17.466 3.0795 17.677C3.29048 17.888 3.57663 18.0065 3.875 18.0065ZM14.855 2.71777L18.0387 5.90152L16.4413 7.49902L13.2575 4.31527L14.855 2.71777ZM5 12.5728L11.6713 5.90152L14.855 9.08527L8.18375 15.7565H5V12.5728ZM21.875 20.2565H1.625C1.32663 20.2565 1.04048 20.375 0.829505 20.586C0.618526 20.797 0.5 21.0832 0.5 21.3815C0.5 21.6799 0.618526 21.966 0.829505 22.177C1.04048 22.388 1.32663 22.5065 1.625 22.5065H21.875C22.1734 22.5065 22.4595 22.388 22.6705 22.177C22.8815 21.966 23 21.6799 23 21.3815C23 21.0832 22.8815 20.797 22.6705 20.586C22.4595 20.375 22.1734 20.2565 21.875 20.2565Z"
+                fill="#C7C7C7" />
+            </svg>
+          </button>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <hr class="hr-line">
+    </div>
+    <div class="row detail-group">
+      <div class="col col-6">
+        <div class="row package-label">
+          แพ็คเกจ
+        </div>
+        <div class="row runtime-label">
+          เวลาที่เปิดใช้งาน
+        </div>
+        <div class="row server-label">
+          ที่ตั้ง Server
+        </div>
+        <div class="row server-label">
+          จำนวนรถ
+        </div>
+        <div class="row server-label">
+          ผู้ใช้งาน
+        </div>
+        <div class="row server-label">
+          วันหมดอายุ
+        </div>
+      </div>
+
+      <div class="col col-6">
+        <div class="row package-label">
+          <span>
+            : {{ data?.package?.packageName ? data?.package?.packageName : '-' }}
+          </span>
+        </div>
+        <div class="row runtime-label">
+          <span>
+            : {{ data?.runtime ? data?.runtime : '-' }} วัน
+          </span>
+        </div>
+        <div class="row server-label">
+          <span>
+            : {{ data?.server?.serverName ? data?.server?.serverName : '-' }}
+          </span>
+        </div>
+        <div class="row car-value-label">
+          <span>
+            : {{ data?.carValue ? data?.carValue : '-' }} คัน
+          </span>
+        </div>
+        <div class="row user-value-label">
+          <span>
+            : {{ data?.userValue ? data?.userValue : '-' }} คน
+          </span>
+        </div>
+        <div class="row exp-date-label">
+          <span class="exp">
+            : {{ data?.expDate ? data?.expDate : '-' }}
+          </span>
+          &nbsp;
+          <span class="time"
+            [ngClass]="{'success-color': data?.color === 'success','danger-color': data?.color === 'danger'}">
+            ({{ data?.timeExp ? data?.timeExp : '-'}} วัน)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header"><span>รายละเอียดผู้ให้บริการ</span></div>
+    <div class="card-body">
+        <div class="row provider">
+            <div class="col-12">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-5 provider-profile">
+                            <img src={{provider?.logo_provider}} class="rounded-circle" />
+                        </div>
+                        <div class="form-group col-7">
+                            <div class="row">
+                                <div class="col-12 provider-name-label">
+                                    {{provider?.providerName}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 tel-number-label">
+                                    {{provider?.telNumber}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 web-url-label">
+                                    {{provider?.webUrl}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group col-12 detail">
+                            <label for="inputDetail">รายละเอียด</label>
+                            <input type="name" class="form-control" id="inputDetail" placeholder="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

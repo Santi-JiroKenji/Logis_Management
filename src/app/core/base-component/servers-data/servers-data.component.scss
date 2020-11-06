@@ -1,0 +1,37 @@
+@import 'theme';
+
+table {
+    border: 1px solid #C4C4C4;
+}
+tbody > tr > td > button {
+    color: #fff;
+    background: gray;
+    // border-width: 1px;
+    // border-style: solid;
+    // border-color: gray;
+    font-size: 13px;
+    padding: 5px 15px;
+    margin-top: -6px;
+}
+tbody > tr > td > button.success-color {
+    background: $success-color;
+}
+tbody > tr > td > button.danger-color {
+    background: $danger-color;
+}
+thead {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #727272;
+}
+tbody {
+    font-family: 'prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+}
+.first-data-on-table {
+    color: $info-color;
+}
